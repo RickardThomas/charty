@@ -1,0 +1,60 @@
+.App {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Navbar {
+  background-color: #333;
+  width: 100vw;
+}
+
+button, a {
+  display: inline;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #333;
+  
+}
+
+button:hover, a:hover {
+  background-color: #333;
+  color: white;
+  transition: 0.2s;
+  opacity: 0.8;
+}
+
+.chart-window, .scalp-chart{
+  background-color: teal;
+  width: 50vw;
+  height: 47vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ @media only screen and (max-width: 1600px){
+
+  .scalp-chart {
+    width: 100vw;
+    height: 93vh;
+  }  
+
+  .chart-window{
+    background-color: teal;
+    display: none;
+    
+  }
+}
+
+
+
+
+
+

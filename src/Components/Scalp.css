@@ -1,0 +1,45 @@
+.ScalpChart{
+    margin: 0;
+    padding: 0;
+    background-color: green;
+    width: 100vw;
+    padding-top: 50px;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.arrow{
+    display: none;
+}
+
+/* browser window is 1000px wide or less */
+@media only screen and (max-width: 1200px) {
+    .ScalpChart {
+        width: 100%;
+        background-color: blue;
+    }
+
+    /* .TradingViewWidget {
+        width: 1000px;
+        height: 1000px;
+    } */
+
+    .arrow{
+
+            border: solid white;
+            border-width: 3px;
+            display: inline-block;
+            padding: 3px;
+            z-index: 2;
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            top: 150px;
+            left: 75px;
+            z-index: 2;
+            cursor: pointer;
+            }
+  }
