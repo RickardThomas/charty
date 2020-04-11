@@ -1,4 +1,4 @@
-.App {
+.app {
   margin: 0;
   padding: 0;
   background-color: grey;
@@ -8,9 +8,10 @@
   flex-wrap: wrap;
 }
 
-.Navbar {
-  background-color: #333;
+.navbar {
+  background-color: whitesmoke;
   width: 100vw;
+
 }
 
 button, a {
@@ -37,6 +38,13 @@ button:hover, a:hover {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
+
+
+  /* 
+  resizeable windows
+  padding: 1%;
+  resize: both;
+  overflow: auto; */
 }
 
  @media only screen and (max-width: 1600px){
