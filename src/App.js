@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import TradingViewWidget from 'react-tradingview-widget';
 
+<<<<<<< HEAD
 const links = [ {text: 'CoinFarm'    , name:"https://coinfarm.online/index.asp?tcs=1h"},
                 {text: 'CMC'         , name:"https://coinmarketcap.com/" }, 
                 {text: 'Bitfinex'    , name: "https://www.bitfinex.com/trading"}, 
@@ -9,16 +10,82 @@ const links = [ {text: 'CoinFarm'    , name:"https://coinfarm.online/index.asp?t
 
 const indicator = { one: [ "MAVolumeWeighted@tv-basicstudies", "BollingerBandsR@tv-basicstudies"],
                     two: [ "RSI@tv-basicstudies",  "CMF@tv-basicstudies"]}
+=======
+function App() {
+
+const [coiny, setCoiny] = useState("COINBASE:BTCEUR");
+const [timeFrame, setTimeFrame] = useState(['30', '60', '180' , 'D'])
+const [indicators, setIndicator] = useState(["BollingerBandsR@tv-basicstudies"]);
+
+const [mode, setMode] = useState(true);
+
+const makeDark = () => {
+  setMode( mode  ? false : true);
+}
+
+console.log(Object.getOwnPropertyNames(TradingViewWidget))
+
+return (
+
+<div className="app">
+
+<div className="navbar">
+
+<button onClick={() => setCoiny("COINBASE:BTCEUR")}>BTC</button>
+<button onClick={() => setCoiny("COINBASE:ETHEUR")}>ETH</button>
+<button onClick={() => setCoiny("COINBASE:BCHEUR")}>BCH</button>
+<button onClick={() => setCoiny("COINBASE:LTCEUR")}>LTC</button>
+
+<button onClick={() => setTimeFrame( [ '3', '15', '45' , '180'])}> Scalping</button>
+<button onClick={() => setTimeFrame([ '45', '60', '180' , 'D'])}> Trading</button>
+
+<button onClick={() => setIndicator([ "MAVolumeWeighted@tv-basicstudies", "RSI@tv-basicstudies", "CMF@tv-basicstudies"])}>CMF /  RSI / VWMA Indicators</button>
+<button onClick={() => setIndicator([ "MACD@tv-basicstudies", "BollingerBandsR@tv-basicstudies"])}>MACD </button>
+>>>>>>> dad07cb5b1a49f0d54a724406c1597c24f7561d3
 
 const sym = ["COINBASE:ETHEUR", "COINBASE:BTCEUR", "COINBASE:BCHEUR",  "COINBASE:LTCEUR" ]
 
 const timeFrames =  { one: ['3', '15', '30',  '180'], two: ['1', '30', '60',  '180'], three: ['30','60', '120', 'D']}
 
+<<<<<<< HEAD
 function App() {
 
 const [coin, setCoin] = useState(sym[1]);
 const [timeFrame, setTimeFrame] = useState(timeFrames.one)
 const [indicators, setIndicator] = useState(indicator.one);
+=======
+</div >
+
+<div className="chart-window">
+
+    <TradingViewWidget
+    symbol={coiny}
+    theme= {mode ?  'Light': 'Dark' }
+    BarStyles='HEIKIN_ASHI'
+    locale="en"
+    Style='8'
+    interval={timeFrame[0]}
+    studies={indicators}  
+    hide_side_toolbar={false}
+    autosize      
+    /> 
+
+</div>
+
+<div className="chart-window">
+
+    <TradingViewWidget
+    symbol={coiny}
+    theme= {mode ?  'Light': 'Dark' }
+    BarStyles='HEIKIN_ASHI'
+    locale="en"
+    Style='8'
+    interval={timeFrame[1]}
+    studies={indicators}  
+    hide_side_toolbar={false}
+    autosize      
+    /> 
+>>>>>>> dad07cb5b1a49f0d54a724406c1597c24f7561d3
 
 const [mode, setMode] = useState(true);
 
