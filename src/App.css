@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 .App {
-=======
-.app {
-  margin: 0;
-  padding: 0;
-  background-color: grey;
-  color: white;
-  box-sizing: border-box;
->>>>>>> dad07cb5b1a49f0d54a724406c1597c24f7561d3
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 100vh}
 
-<<<<<<< HEAD
 .dark{ 
 background: #333;
 color: white}
@@ -22,12 +12,6 @@ color: white}
 nav {
 width: 100%;
 padding: 10px 0px 10px
-=======
-.navbar {
-  background-color: whitesmoke;
-  width: 100vw;
-
->>>>>>> dad07cb5b1a49f0d54a724406c1597c24f7561d3
 }
 
 a, span{
@@ -42,22 +26,7 @@ a:hover, span:hover{
 
 .chart-window, .scalp-chart{
   width: 50vw;
-<<<<<<< HEAD
   height: 47vh}
-=======
-  height: 47vh;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-
-
-  /* 
-  resizeable windows
-  padding: 1%;
-  resize: both;
-  overflow: auto; */
-}
->>>>>>> dad07cb5b1a49f0d54a724406c1597c24f7561d3
 
 span.dark:hover, a.dark:hover {
   color: #333;
